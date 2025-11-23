@@ -1,16 +1,15 @@
 package Lab1;
+import java.util.Scanner;
 
 public class Lab102 {
-public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
 
-        double width = sc.nextDouble();
-        double height = sc.nextDouble();
+        double a = in.nextDouble();
+        double b = in.nextDouble();
 
-        double area = width * height;
+        System.out.println(a * b);
 
-        System.out.println(area);
-        
-        sc.close();
+        in.close();
     }
 }
