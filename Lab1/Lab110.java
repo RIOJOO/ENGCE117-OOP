@@ -2,7 +2,7 @@ package Lab1;
 
 import java.util.Scanner;
 
-public class Lab10 {
+public class Lab110 {
 
     public static double calculateArea(double width, double height) {
         return width * height; 
