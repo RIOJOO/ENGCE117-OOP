@@ -8,7 +8,6 @@ public class Lab107 {
         Scanner scanner = new Scanner(System.in);
         
         int N;
-        int m; //
         
         do {
             System.out.print("Enter the number of integers (N, N >= 1): ");
