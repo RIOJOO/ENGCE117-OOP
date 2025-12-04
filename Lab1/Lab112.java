@@ -15,23 +15,23 @@ public class Lab112 {
         int[] stockQuantities = new int[n];      // สำหรับจำนวนคงคลัง
         
         // รับข้อมูลสินค้า n ชิ้น
-        for (int i = 0; i < n; i++) {
-            System.out.println("Enter details for product " + (i + 1) + ":");
+        for (int index = 0; index < n; index++) {
+            System.out.println("Enter details for product " + (index + 1) + ":");
             // รับรหัสสินค้า ( ID )
             System.out.print("  Product ID: ");
-            productIDs[i] = scanner.nextInt();
+            productIDs[index] = scanner.nextInt();
             // รับจำนวนคงคลัง ( Stock )
             System.out.print("  Stock Quantity: ");
-            stockQuantities[i] = scanner.nextInt();
+            stockQuantities[index] = scanner.nextInt();
         }
         // รับรหัสสินค้าที่ต้องการค้น (Search ID)
         System.out.print("Enter the Product ID to search: ");
         int searchID = scanner.nextInt();
         // ค้นหาสินค้าและแสดงผล
         int foundStock = -1;  // เอา -1 มาเป็นค่าเริ่มต้นเพื่อบอกว่ายังไม่เจอสินค้า
-        for (int i = 0; i < n; i++) {
-            if (productIDs[i] == searchID) {
-                foundStock = stockQuantities[i];
+        for (int index = 0; index < n; index++) {
+            if (productIDs[index] == searchID) {
+                foundStock = stockQuantities[index];
                 break; // หยุดหาต่อเมื่อเจอสินค้า
             }
         }
