@@ -13,13 +13,10 @@ public class Lab111 {
         }
         return sum;
     }
-
-
     //รับค่าจำนวนเต็มบวกจากผู้ใช้ พร้อมการตรวจสอบความถูกต้องของข้อมูล
     public static int getPositiveIntInput(Scanner scanner, String prompt) {
         int input = 0;
         boolean isValid = false;
-
         while (!isValid) {
             System.out.print(prompt);
             try {
@@ -41,14 +38,11 @@ public class Lab111 {
         }
         return input;
     }
-
-    
     // รับค่าตัวเลข n ตัวจากผู้ใช้เพื่อเก็บในอาเรย์
     public static int[] getArrayElements(Scanner scanner, int n) {
         int[] numbers = new int[n];
         System.out.println("---------------------------------");
         System.out.println("Enter the integer " + n + " to store in the array:");
-
         for (int i = 0; i < n; i++) {
             boolean isValid = false;
             while (!isValid) {
@@ -69,21 +63,18 @@ public class Lab111 {
         }
         return numbers;
     }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("--- Find the sum of the numbers in an array. ---");
         int n = getPositiveIntInput(scanner, "Enter an integer N (the size of the array).: ");
-
         int[] numbers = getArrayElements(scanner, n);
-
         // เรียกใช้ฟังก์ชัน sumArray
         int totalSum = sumArray(numbers);
-
         // เอาผลลัพธ์แสดงบนหน้าจอ
         System.out.println("---------------------------------");
         System.out.println(" The sum of the numbers in the array is: " + totalSum);
-
         scanner.close();
     }
 }
+/*
+* แล้วแต่คิงจะกึ๊ดเต๊อะฮายะตึงวันก่ได้คะแนนตะอี้หนะ */
