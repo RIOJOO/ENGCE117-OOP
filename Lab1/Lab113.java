@@ -16,7 +16,7 @@ public class Lab113 {
         int C = scanner.nextInt();
         return new int[]{ R , C };
     }
- // 2. เมธอดสำหรับรับค่า Grid และนับเซิร์ฟเวอร์ออนไลน์ (ตรรกะหลัก)
+ //  เมธอดสำหรับรับค่า Grid และนับเซิร์ฟเวอร์ออนไลน์ (ตรรกะหลัก)
     public static int readAndCountGrid(int R, int C) {
         int[][] grid = new int[R][C];
         int onlineCount = 0;
@@ -37,15 +37,15 @@ public class Lab113 {
 
     public static void main(String[] args) {
         
-        // 1. รับขนาด Array
+        // รับขนาด Array
         int[] size = readGridSize();
         int R = size[0];
         int C = size[1];
         
-        // 2. รับค่า Grid และนับ
+        //  รับค่า Grid และนับ
         int onlineCount = readAndCountGrid(R, C);
         
-        // 3. แสดงผลลัพธ์
+        //  แสดงผลลัพธ์
         System.out.println("----------------------------------  ");
         System.out.println("Total number of online servers: " + onlineCount);
 
