@@ -5,11 +5,13 @@ import java.util.Scanner;
 public class Lab110 {
 
     public static double calculateArea(double width, double height) {
+        // คำนวณพื้นที่ความกว้างสูง
         return width * height; 
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Enter the width (double): ");
         if (!scanner.hasNextDouble()) {
              System.out.println("Invalid input for width. Please enter a number.");
@@ -17,8 +19,9 @@ public class Lab110 {
              return;
         }
         double width = scanner.nextDouble();
-        
+        // รับค่าความกว้าง
         System.out.print("Enter the height (double): ");
+        // รับค่าความสูง
         if (!scanner.hasNextDouble()) {
              System.out.println("Invalid input for height. Please enter a number.");
              scanner.close();
