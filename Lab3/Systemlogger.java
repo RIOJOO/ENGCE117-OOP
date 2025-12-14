@@ -5,7 +5,7 @@ public class SystemLogger {
     private static final int ERROR = 3;
     private static final String UNKNOWN = "UNKNOWN";
 
-    private static int currentLogLevel = INFO; 
+    private static int currentLogLevel = INFO;
 
     private static String getLevelName(int level) {
         if (level == INFO) {
@@ -47,19 +47,20 @@ public class SystemLogger {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println("--- Start Test Case 1 ---");
-        
-        
-        SystemLogger.setLogLevel(DEBUG); 
-        SystemLogger.setLogLevel(1);
-        SystemLogger.setLogLevel(2);
-        SystemLogger.logInfo("LOG", "User login attempt"); 
-        SystemLogger.logInfo("LOG", "Database query executing");
-        SystemLogger.logInfo("LOG", "Critical error occurred");
-        SystemLogger.setLogLevel(5);
-        SystemLogger.setLogLevel(0);
-        
-        System.out.println("--- End Test Case 1 ---");
+// ... ใน public static void main(String[] args)
+public static void main(String[] args) {
+    System.out.println("--- Start Test Case 1 ---");
+
+    // ใช้ชื่อเมธอดโดยตรง
+    setLogLevel(DEBUG); 
+    setLogLevel(1);
+    setLogLevel(2);
+    logInfo("LOG", "User login attempt"); 
+    logInfo("LOG", "Database query executing");
+    logInfo("LOG", "Critical error occurred");
+    setLogLevel(5);
+    setLogLevel(0);
+
+    System.out.println("--- End Test Case 1 ---");
     }
 }
