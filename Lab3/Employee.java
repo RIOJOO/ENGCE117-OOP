@@ -1,38 +1,48 @@
-public class Employee {
+import java.util.Scanner;
 
-    private String employeeId; 
-    private String department; 
+class Employee {
+
+    private String employeeId;
+    private String department;
 
     public Employee(String employeeId, String department) {
         this.employeeId = employeeId;
         this.department = department;
-        System.out.println("Employee object created for ID: " + employeeId);
     }
 
     public String getEmployeeId() {
         return employeeId;
     }
 
+    
     public String getDepartment() {
         return department;
     }
 
+    
     public void setDepartment(String newDepartment) {
         this.department = newDepartment;
-        System.out.println("Department updated to: " + newDepartment);
     }
+}
 
+public class Main {
     public static void main(String[] args) {
-        String initialEmployeeId = "E1001";
-        String initialDepartment = "Sales";
-        String newDepartment = "Marketing";
+        Scanner scanner = new Scanner(System.in);
 
-        Employee employee = new Employee(initialEmployeeId, initialDepartment);
+        String employeeIdInput = scanner.nextLine();
 
-        employee.setDepartment(newDepartment);
+        String oldDepartmentInput = scanner.nextLine();
+        
+        String newDepartmentInput = scanner.nextLine();
+
+        Employee employee = new Employee(employeeIdInput, oldDepartmentInput);
+
+        employee.setDepartment(newDepartmentInput);
 
         System.out.println(employee.getEmployeeId());
-
+        
         System.out.println(employee.getDepartment());
+
+        scanner.close();
     }
 }
