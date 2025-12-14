@@ -1,5 +1,3 @@
-package Lab3;
-
 public class User { 
 
     private String username;
