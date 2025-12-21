@@ -5,8 +5,7 @@ class Player {
     private int level;
 
     public Player() {
-        this.username = "Guest";
-        this.level = 1;
+        this("Guest", 1);
     }
 
     public Player(String username, int level) {
@@ -15,7 +14,7 @@ class Player {
     }
 
     public void displayProfile() {
-        System.out.println("User: " + username + ", Level: " + level);
+        System.out.printf("User: %s, Level: %d%n", username, level);
     }
 }
 
@@ -23,19 +22,24 @@ public class Lab403 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        int mode = sc.nextInt();
-        sc.nextLine();
+        if (sc.hasNextInt()) {
+            int mode = sc.nextInt();
+            sc.nextLine();
 
-        if (mode == 1) {
-            Player p = new Player();
-            p.displayProfile();
-        } else if (mode == 2) {
-            String name = sc.nextLine();
-            int level = sc.nextInt();
-            Player p = new Player(name, level);
-            p.displayProfile();
+            Player p = null;
+            
+            if (mode == 1) {
+                p = new Player();
+            } else if (mode == 2) {
+                String name = sc.nextLine();
+                int level = sc.hasNextInt() ? sc.nextInt() : 0;
+                p = new Player(name, level);
+            }
+
+            if (p != null) {
+                p.displayProfile();
+            }
         }
-        
         sc.close();
     }
 }
