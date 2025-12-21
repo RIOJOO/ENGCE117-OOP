@@ -16,12 +16,12 @@ class EmployeeSchedule {
 
     public EmployeeSchedule(String name, Schedule schedule) {
         this.name = name;
-        this.schedule = new Schedule(schedule.getHour());
+        this.schedule = schedule;
     }
 
     public EmployeeSchedule(EmployeeSchedule other) {
         this.name = other.name;
-        this.schedule = new Schedule(other.schedule.getHour());
+        this.schedule = new Schedule(other.schedule.getHour()); 
     }
 
     public void displaySchedule() {
@@ -33,18 +33,17 @@ public class Lab412 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        if (!sc.hasNext()) return;
         String name = sc.next();
-        int initialHour = sc.nextInt();
-        int newHour = sc.nextInt();
+        int h1 = sc.nextInt();
+        int h2 = sc.nextInt();
 
-        Schedule sch1 = new Schedule(initialHour);
+        Schedule sch1 = new Schedule(h1);
         
         EmployeeSchedule emp1 = new EmployeeSchedule(name, sch1);
         
         EmployeeSchedule emp2 = new EmployeeSchedule(emp1);
 
-        sch1.setHour(newHour);
+        sch1.setHour(h2);
 
         emp1.displaySchedule();
         emp2.displaySchedule();
