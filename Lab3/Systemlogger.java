@@ -40,18 +40,16 @@ public class SystemLogger {
         
         if (currentLogLevel >= DEBUG) {
             System.out.println("[" + getLevelName(currentLogLevel) + "] [" + logName + "] (" 
-                               + getLevelName(currentLogLevel) + ") " + message);
+                            + getLevelName(currentLogLevel) + ") " + message);
         } else {
             
             System.out.println("Current Log level is [" + getCurrentLevel() + "]");
         }
     }
 
-// ... ใน public static void main(String[] args)
 public static void main(String[] args) {
     System.out.println("--- Start Test Case 1 ---");
 
-    // ใช้ชื่อเมธอดโดยตรง
     setLogLevel(DEBUG); 
     setLogLevel(1);
     setLogLevel(2);
