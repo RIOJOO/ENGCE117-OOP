@@ -17,7 +17,7 @@ class Book {
     }
 }
 
-public class Main {
+public class Lab401 {
     public static void main(String[] args) {
 
         Book book1 = new Book("Clean Code", "Robert C. Martin");

@@ -19,7 +19,7 @@ class Player {
     }
 }
 
-public class Main1 {
+public class Lab403 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         

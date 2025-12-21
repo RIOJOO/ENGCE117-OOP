@@ -23,7 +23,7 @@ class Location {
     }
 }
 
-public class Main2 {
+public class Lab404 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

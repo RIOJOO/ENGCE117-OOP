@@ -18,7 +18,7 @@ class Product {
     }
 }
 
-public class ProductMain {
+public class Lab402 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         

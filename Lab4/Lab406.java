@@ -23,7 +23,7 @@ class Point {
     }
 }
 
-public class Main4 {
+public class Lab406 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
