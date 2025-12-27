@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Animal502 {
+class Animal {
     protected String name;
     protected int age;
 
@@ -13,28 +13,28 @@ class Animal502 {
     }
 }
 
-class Cat extends Animal502 {
+class Cat extends Animal {
     @Override
     public void makeSound() {
         System.out.println("Meow!");
     }
 }
-
 public class Lab502 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+
+        // รับค่าจาก input
+        String inputName = scanner.nextLine();
+        int inputAge = scanner.nextInt();
 
         Cat myCat = new Cat();
 
-        String catName = sc.nextLine();
-        int catAge = sc.nextInt();
-
-        myCat.name = catName;
-        myCat.age = catAge;
+        myCat.name = inputName;
+        myCat.age = inputAge;
 
         myCat.displayInfo();
         myCat.makeSound();
-
-        sc.close();
+        
+        scanner.close();
     }
 }
