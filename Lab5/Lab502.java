@@ -9,7 +9,7 @@ class Animal {
     }
 
     public void displayInfo() {
-        System.out.println("Name: " + name + ", Age: " + age);
+        System.out.printf("Name: %s, Age: %d%n", this.name, this.age);
     }
 }
 
@@ -19,22 +19,24 @@ class Cat extends Animal {
         System.out.println("Meow!");
     }
 }
+
 public class Lab502 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            
+            String name = sc.nextLine();
+            int age = sc.nextInt();
 
-        // รับค่าจาก input
-        String inputName = scanner.nextLine();
-        int inputAge = scanner.nextInt();
+            Cat myCat = new Cat();
+            myCat.name = name;
+            myCat.age = age;
 
-        Cat myCat = new Cat();
+            renderOutput(myCat);
+        }
+    }
 
-        myCat.name = inputName;
-        myCat.age = inputAge;
-
-        myCat.displayInfo();
-        myCat.makeSound();
-        
-        scanner.close();
+    private static void renderOutput(Cat cat) {
+        cat.displayInfo();
+        cat.makeSound();
     }
 }
