@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Animal {
+class Animal502 {
     protected String name;
     protected int age;
 
@@ -13,7 +13,7 @@ class Animal {
     }
 }
 
-class Cat extends Animal {
+class Cat extends Animal502 {
     @Override
     public void makeSound() {
         System.out.println("Meow!");
@@ -26,14 +26,13 @@ public class Lab502 {
 
         Cat myCat = new Cat();
 
-        String nameInput = sc.nextLine();
-        int ageInput = sc.nextInt();
+        String catName = sc.nextLine();
+        int catAge = sc.nextInt();
 
-        myCat.name = nameInput;
-        myCat.age = ageInput;
+        myCat.name = catName;
+        myCat.age = catAge;
 
         myCat.displayInfo();
-
         myCat.makeSound();
 
         sc.close();
